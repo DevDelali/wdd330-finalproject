@@ -25,10 +25,10 @@ function updateCartCount() {
 
 export async function loadHeaderFooter() {
     const headerTemplate = await loadTemplate(
-        "partials/header.html",
+        "./partials/header.html",
         `<header><nav><a href="index.html"><img src="images/logo.svg" alt="Movie Recommendations Logo"></a><form><input type="text" placeholder="Search movies..."><button type="submit">Search</button></form><a href="index.html">Home</a><a href="movies.html">Movies</a><a href="favorites.html">Favorites</a><a href="about.html">About</a></nav></header>`
     );
-    const footerTemplate = await loadTemplate("partials/footer.html", "<footer></footer>");
+    const footerTemplate = await loadTemplate("./partials/footer.html", "<footer></footer>");
 
     const headerElement = document.querySelector("#main-header");
     const footerElement = document.querySelector("#main-footer");
