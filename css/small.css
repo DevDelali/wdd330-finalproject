@@ -65,6 +65,10 @@ header nav {
     justify-content: flex-end;
 }
 
+header .highlight {
+    color: var(--accent-color);
+}
+
 footer {
     display: flex;
     align-items: center;
