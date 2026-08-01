@@ -1,0 +1,1 @@
+// Handles Local Storage for favorite movies.

@@ -1,1 +1,7 @@
 /* style the webpage for desktop view */
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+}

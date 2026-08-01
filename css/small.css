@@ -1,1 +1,203 @@
 /* style the webpage for mobile view */
+/* •	Primary Color: #1E3A8A (Deep Blue)
+•	Secondary Color: #EF4444 (Red)
+•	Background Color: #F8FAFC (Light Gray)
+•	Card Color: #FFFFFF (White)
+•	Accent Color: #FACC15 (Gold)
+•	Text Color: #1F2937 (Dark Gray) 
+
+font-style(header): Poppins, sans-serif;
+font-style(text): Roboto, sans-serif;
+*/
+
+:root {
+    --primary-color: #1E3A8A;
+    --secondary-color: #EF4444;
+    --background-color: #F8FAFC;
+    --card-color: #FFFFFF;
+    --accent-color: #FACC15;
+    --text-color: #1F2937;
+    --font-header: 'Poppins', sans-serif;
+    --font-text: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    padding: 1rem;
+    font-family: var(--font-header);
+    gap: 2rem;
+}
+
+header>* {
+    flex: 1 1 0;
+}
+
+header .logo,
+header .search-form,
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    gap: 0.75rem;
+    justify-content: flex-start;
+}
+
+header .search-form {
+    justify-content: center;
+}
+
+header nav {
+    justify-content: flex-end;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    padding: 1rem;
+    font-family: var(--font-header);
+}
+
+header img {
+    height: 48px;
+}
+
+header img {
+    height: 48px;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+header form input {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 999px;
+    font-family: var(--font-text);
+    outline: none;
+}
+
+header form button {
+    background-color: var(--secondary-color);
+    color: var(--card-color);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-text);
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+header form button:hover {
+    background-color: var(--accent-color);
+}
+
+.navigation ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    color: var(--card-color);
+    margin: 0 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    padding-bottom: 0.25rem;
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Active/current page link */
+.navigation a.active,
+.navigation a[aria-current="page"] {
+    color: var(--accent-color);
+    text-decoration: none;
+    /* font-weight: 700; */
+}
+
+
+/* MAIN CONTENT */
+main {
+    background-color: var(--background-color);
+    padding: 1rem;
+    font-family: var(--font-text);
+}
+
+/* FOOTER */
+.align-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    padding: 1rem 1.5rem;
+    font-family: var(--font-header);
+}
+
+.align-footer .footer-copy {
+    margin: 0;
+    font-size: 0.95rem;
+    flex: 1;
+    text-align: center;
+}
+
+.align-footer .social-icons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.align-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.align-footer a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+.align-footer img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}

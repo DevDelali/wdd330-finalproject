@@ -1,0 +1,1 @@
+// Creates and updates movie cards and UI components.
