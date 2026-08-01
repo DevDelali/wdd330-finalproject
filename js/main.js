@@ -1,6 +1,7 @@
 // Initializes the application.
 
 import { loadHeaderFooter } from './utils.mjs';
+imp
 
 async function init() {
 	await loadHeaderFooter();
