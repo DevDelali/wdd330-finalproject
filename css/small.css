@@ -12,10 +12,14 @@ font-style(text): Roboto, sans-serif;
 
 :root {
     --primary-color: #1E3A8A;
+    --shades-of-primary-color: #030922;
+    --tint-of-primary-color: #5B74AF;
     --secondary-color: #EF4444;
     --background-color: #F8FAFC;
     --card-color: #FFFFFF;
     --accent-color: #FACC15;
+    --shades-of-accent-color: #BA970C;
+    --tint-of-accent-color: #FCDD7C;
     --text-color: #1F2937;
     --font-header: 'Poppins', sans-serif;
     --font-text: 'Roboto', sans-serif;
@@ -38,6 +42,9 @@ header {
     padding: 1rem;
     font-family: var(--font-header);
     gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header>* {
@@ -68,6 +75,37 @@ header nav {
 header .highlight {
     color: var(--accent-color);
 }
+
+.hero {
+    background-color: var(--tint-of-primary-color);
+    color: var(--card-color);
+    margin: 0;
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: var(--font-header);
+}
+
+.page-title {
+    padding-left: 1rem;
+    /* content: ""; */
+    width: 100%;
+    /* height: 2px; */
+    /* background-color: var(--shades-of-primary-color); */
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--shades-of-primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* .page-title::after {
+    content: "";
+    display: inline-block;
+    width: 5%;
+    height: 4px;
+    background-color: var(--shades-of-primary-color);
+} */
 
 footer {
     display: flex;
@@ -155,7 +193,7 @@ header form button:hover {
 /* MAIN CONTENT */
 main {
     background-color: var(--background-color);
-    padding: 1rem;
+    /* padding: 1rem;  */
     font-family: var(--font-text);
 }
 
@@ -190,13 +228,13 @@ main {
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: var(--tint-of-primary-color); */
     border-radius: 50%;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .align-footer a:hover {
-    background: rgba(255, 255, 255, 0.18);
+    background: var(--tint-of-primary-color);
     transform: translateY(-1px);
 }
 
@@ -204,4 +242,124 @@ main {
     width: 20px;
     height: 20px;
     margin: 0;
+}
+
+.content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* About layout */
+.about-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.about-content,
+.about-image {
+    flex: 1 1 400px;
+}
+
+.about-content h1 {
+    font-family: var(--font-header);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 1rem;
+    display: block;
+}
+
+.about-features {
+    background-color: var(--tint-of-primary-color);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.about-features>div {
+    padding: 1.5rem;
+    background-color: var(--tint-of-accent-color);
+    border-radius: 1rem;
+}
+
+.about-features img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+}
+
+/* .about-features img :hover {
+    border-radius: 2px solid var(--tint-of-accent-color);
+} */
+
+.about-features h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-family: var(--font-header);
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    header>* {
+        flex: none;
+        width: 100%;
+    }
+
+    header .logo {
+        justify-content: space-between;
+    }
+
+    header .search-form {
+        width: 100%;
+    }
+
+    header form {
+        width: 100%;
+    }
+
+    .navigation ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    .navigation a {
+        margin: 0;
+    }
+
+    .align-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .align-footer .footer-copy {
+        text-align: center;
+    }
 }
